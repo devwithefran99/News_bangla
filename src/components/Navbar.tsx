@@ -18,7 +18,7 @@ const Navbar = async ()  => {
     const filteredNavs = navs.filter(n => n.scrapable)
     
     return (
-        <div className='flex gap-4 justify-center bg-gray-100 p-2'>
+        <div className='flex gap-4 justify-center bg-gray-200 p-2 mt-2'>
             <Link href='/'>হোম</Link>
             {filteredNavs.map((n, i) => <Link key={i} href={n.slug}>{n.title} </Link>)}
         </div>
