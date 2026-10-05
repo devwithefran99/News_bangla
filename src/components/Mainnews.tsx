@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 interface News {
     id: string;
@@ -13,9 +14,10 @@ interface News {
 
 const Mainnews = ({ news}: { news: News[] }) => {
     const [FirstNews , ...OtherNews] = news
-    console.log(news);
+    // console.log(news);
     return (
         <div className='flex gap-3'>
+           <Link href={`/news/${FirstNews.id}`}>
             <div className="card bg-base-100 w-96 shadow-sm">
   <figure>
     <Image
@@ -30,7 +32,7 @@ const Mainnews = ({ news}: { news: News[] }) => {
     <p>{FirstNews.description}</p>
     
   </div>
-</div>
+</div></Link>
 
 <div>
     

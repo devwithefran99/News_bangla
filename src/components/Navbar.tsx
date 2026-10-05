@@ -20,7 +20,7 @@ const Navbar = async ()  => {
     return (
         <div className='flex gap-4 justify-center bg-gray-200 p-2 mt-2'>
             <Link href='/'>হোম</Link>
-            {filteredNavs.map((n, i) => <Link key={i} href={n.slug}>{n.title} </Link>)}
+            {filteredNavs.map((n, i) => <Link key={i} href={`/category/${n.slug}`}>{n.title} </Link>)}
         </div>
     );
 };
