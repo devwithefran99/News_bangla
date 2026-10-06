@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 import Navbar from './Navbar';
+import Link from 'next/link';
+import UserInfo from './UserInfo';
 
 const Header = () => {
     const date = new Date().toLocaleDateString("bn-BD", {
@@ -20,15 +22,12 @@ const Header = () => {
                 <p className="text-sm">{date}</p>
             </div>
         </div>
-        <div className="flex gap-2  bg-gray-100 justify-center">
-            <button className="btn btn-outline">সাইন ইন</button>
-            <button className="btn bg-red-700 text-white">সাইন আপ</button>
-        </div>
-
+        
+        <UserInfo />
         </div>
         <Navbar />
         </>
-    );
+    );   
 };
 
 export default Header;

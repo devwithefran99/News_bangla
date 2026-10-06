@@ -2,6 +2,7 @@ import Mainnews from '@/components/Mainnews';
 
 import MostRead from '@/components/MostRead';
 import NewsCard from '@/components/NewsCard';
+import { ToastContainer } from 'react-toastify';
 
 interface IOtherSection {
   curationId: string;
@@ -32,6 +33,7 @@ const page = async() => {
 
 
   return (
+    
     <div>
       
       <div className='grid grid-cols-3 container mx-auto'>
@@ -56,6 +58,12 @@ const page = async() => {
         </div>
        
       </div>
+<ToastContainer
+  position="top-right"
+  autoClose={3000}
+  hideProgressBar={true}
+   style={{ zIndex: 999999 }}
+/>
     </div>
   );
 };
