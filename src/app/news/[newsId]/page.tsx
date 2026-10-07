@@ -16,7 +16,7 @@ const NewsDetails = async ({ params }: { params: { newsId: string } }) => {
     const res = await fetch(`https://news-api-v2.vercel.app/api/article/${newsId}`);
     const data = await res.json();
     const news: INews = data;
-    console.log(news);
+    // console.log(news);
     
 
     return (

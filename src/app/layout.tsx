@@ -3,6 +3,7 @@ import { Noto_Sans_Bengali } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Marquee from "@/components/Marquee";
+import { ToastContainer } from "react-toastify";
 
 const notoSansBangali = Noto_Sans_Bengali({
  
@@ -24,6 +25,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <Header />
         <Marquee />
+        <ToastContainer
+  position="bottom-right"
+  autoClose={3000}
+  hideProgressBar={true}
+   style={{ zIndex: 999999 }}
+/>
         {children}
         </body>
     </html>
